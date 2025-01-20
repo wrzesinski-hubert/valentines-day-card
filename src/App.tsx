@@ -44,7 +44,6 @@ export const App = () => {
 
   const [difficultyLevel, setDifficultyLevel] = useState(1);
   const [clickedFlowers, setClickedFlowers] = useState<number[]>([]);
-  const listOfLetters = ["K", "O", "C", "H", "A", "M"];
 
   const listOfAllFlowers = useMemo(
     () =>
@@ -74,7 +73,7 @@ export const App = () => {
       {clickedFlowers.length === NUMBER_OF_TULIPS && (
         <div className="container-absolute">
           <div className="container-relative">
-            {Array.from({ length: 200 }, (_, index) => (
+            {Array.from({ length: 200 }, (_) => (
               <div className="circle-container">
                 <div className="circle" />
               </div>
