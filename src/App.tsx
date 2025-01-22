@@ -129,7 +129,7 @@ export const App = () => {
             <div
               className="flowers-grid"
               style={{
-                gridTemplateColumns: `repeat(${10 * difficultyLevel}, 25px)`,
+                gridTemplateColumns: `repeat(${10}, 25px)`,
               }}
             >
               {listOfAllFlowers.map((flower, index) => {
