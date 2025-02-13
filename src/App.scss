@@ -3,10 +3,9 @@
 .title {
   font-family: "Loved by the King", serif;
   font-size: 44px;
-  padding-top: 30px;
 }
 
-.flowers-wrapper {
+.game-wrapper {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -14,7 +13,9 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  gap: 50px;
+  gap: 40px;
+  padding: 35px;
+  box-sizing: border-box;
   * {
     animation: message-frames 1.5s ease 0.5s forwards;
     opacity: 0;
@@ -31,11 +32,33 @@
   }
 }
 
+.ja-photo {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  max-width: 440px;
+}
+
 .flowers-grid {
   display: grid;
   gap: 5px;
   margin-bottom: 20px;
   overflow: auto;
+  --sb-track-color: #ffffff2f;
+  --sb-thumb-color: #ff90e8;
+  --sb-size: 5px;
+  &::-webkit-scrollbar {
+    width: var(--sb-size);
+  }
+  &::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 6px;
+  }
 }
 
 .clicked-flowers {
@@ -211,12 +234,18 @@
 .message {
   color: #811010;
   font-family: "Loved by the King", serif;
-  line-height: 27px;
   font-size: 38px;
-  text-align: right;
   pointer-events: none;
   animation: message-frames 1.5s ease 0.5s forwards;
   opacity: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @keyframes message-frames {
     from {
