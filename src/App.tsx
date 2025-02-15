@@ -13,7 +13,6 @@ import Sunflower from "./images/Sunflower.png";
 import Tulip from "./images/Tulip.png";
 import Ja from "./images/1.jpeg";
 import Ja2 from "./images/2.jpeg";
-import Ja3 from "./images/3.jpeg";
 import "./App.scss";
 
 const NUMBER_OF_TULIPS = 5;
@@ -31,7 +30,7 @@ const FLOWERS = [
   Rose,
   Sunflower,
 ];
-const ja = [Ja, Ja2, Ja3];
+const ja = [Ja, Ja2, Ja2];
 
 const generateRandomNumbers = (range: number) => {
   const numbers = new Set<number>();
